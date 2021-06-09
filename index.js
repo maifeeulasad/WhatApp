@@ -12,6 +12,7 @@ function whatApp() {
         },
     });
     window.setMenuBarVisibility(false);
+    window.maximize();
 
     window.loadURL(url,{userAgent}).then();
 
