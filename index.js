@@ -1,6 +1,6 @@
 const { app } = require('electron')
 import { createWindow } from './src/window';
-import {createTray} from './src/tray';
+import { createTray } from './src/tray';
 
 function start(){
     createWindow().then((window)=>{
