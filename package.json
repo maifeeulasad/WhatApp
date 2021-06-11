@@ -8,8 +8,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "babel-register": "^6.26.0"
+    "esm": "^3.2.25"
   },
   "scripts": {
     "start": "electron -r babel-register .",
@@ -17,6 +16,8 @@
   },
   "type": "module",
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
     "electron": "^13.1.1",
     "electron-builder": "^22.10.5"
   }

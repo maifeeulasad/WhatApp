@@ -1,5 +1,5 @@
-const { Tray, Menu} = require('electron');
-const path = require('path');
+import { Tray, Menu } from 'electron'
+import * as path from 'path'
 
 export function createTray(window, app) {
     const tray = new Tray(path.join(__dirname, '../resources/icon48.png'))
