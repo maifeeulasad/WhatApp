@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "What app is this? This surely looks like WhatsApp",
   "main": "index.js",
+  "module": "main.js",
   "repository": "https://github.com/maifeeulasad/WhatApp.git",
   "author": "maifeeulasad <maifeeulasad@gmail.com>",
   "license": "MIT",
