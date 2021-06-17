@@ -19,5 +19,14 @@
   "devDependencies": {
     "electron": "^13.1.1",
     "electron-builder": "^22.10.5"
+  },
+  "build": {
+    "appId": "whatapp",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
   }
 }
