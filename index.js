@@ -8,5 +8,5 @@ const start = () => {
     })
 }
 
-app.on('ready', start);
-app.on('window-all-closed', () => app.quit());
+app.on('ready', start)
+app.on('window-all-closed', () => app.quit())

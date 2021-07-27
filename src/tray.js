@@ -1,18 +1,18 @@
-const { Tray, Menu} = require('electron');
-const path = require('path');
+const { Tray, Menu} = require('electron')
+const path = require('path')
 
 function createTray(window, app) {
     const tray = new Tray(path.join(__dirname, '../resources/icon48.png'))
     const contextMenu = Menu.buildFromTemplate([
         {
             label: '@ Front',click(){
-                window.show();
+                window.show()
             }
         },
         { type: 'separator' },
         {
             label: 'Exit' , click(){
-                app.quit();
+                app.quit()
             }
         }
     ])
@@ -21,4 +21,4 @@ function createTray(window, app) {
     tray.setContextMenu(contextMenu)
 }
 
-module.exports = { createTray };
+module.exports = { createTray }
