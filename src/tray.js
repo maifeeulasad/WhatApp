@@ -1,7 +1,7 @@
 const { Tray, Menu} = require('electron');
 const path = require('path');
 
-export function createTray(window, app) {
+function createTray(window, app) {
     const tray = new Tray(path.join(__dirname, '../resources/icon48.png'))
     const contextMenu = Menu.buildFromTemplate([
         {
@@ -20,3 +20,5 @@ export function createTray(window, app) {
     tray.setTitle('WhatApp')
     tray.setContextMenu(contextMenu)
 }
+
+module.exports = { createTray };

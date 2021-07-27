@@ -12,10 +12,9 @@
     "babel-register": "^6.26.0"
   },
   "scripts": {
-    "start": "electron -r babel-register .",
+    "start": "electron .",
     "build": "electron-builder"
   },
-  "type": "module",
   "devDependencies": {
     "electron": "^13.1.1",
     "electron-builder": "^22.10.5"

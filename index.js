@@ -1,10 +1,8 @@
-import { app as application } from 'electron';
-import { createWindow } from './src/window';
-import { createTray } from './src/tray';
+const {app} = require('electron')
+const {createWindow} = require('./src/window')
+const {createTray}  = require('./src/tray')
 
-const app = application
-
-function start(){
+const start = () => {
     createWindow().then((window)=>{
         createTray(window,app)
     })
