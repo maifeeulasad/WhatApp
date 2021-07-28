@@ -10,6 +10,9 @@ let windowSingleton
 
 const start = () => {
     createWindow().then((window)=>{
+        if(!lock){
+            showNotification()
+        }
         windowSingleton = window
         createTray(window,app)
     })
@@ -27,10 +30,6 @@ const showNotification = () => {
         icon
     }
     new Notification(notification).show()
-}
-
-if(!lock){
-    showNotification()
 }
 
 app.on('ready', start)
