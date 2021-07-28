@@ -1,6 +1,6 @@
 {
   "name": "WhatApp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "What app is this? This surely looks like WhatsApp",
   "main": "index.js",
   "repository": "https://github.com/maifeeulasad/WhatApp.git",
