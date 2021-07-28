@@ -15,6 +15,7 @@ const start = () => {
         }
         windowSingleton = window
         createTray(window,app)
+        preventDestroy(window)
     })
 }
 
@@ -30,6 +31,14 @@ const showNotification = () => {
         icon
     }
     new Notification(notification).show()
+}
+
+const preventDestroy = (window) => {
+    window.on('close', function (event) {
+        event.preventDefault()
+        window.hide()
+        return false
+    })
 }
 
 app.on('ready', start)
