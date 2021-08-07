@@ -2,7 +2,7 @@ const { screen, BrowserWindow } = require('electron')
 const path = require('path')
 
 const url = 'https://web.whatsapp.com/'
-const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36'
+const userAgent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36'
 
 function createWindow() {
     return new Promise(res => {
