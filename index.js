@@ -1,4 +1,4 @@
-const {app, Notification} = require('electron')
+const {app, Notification, session} = require('electron')
 const path = require('path')
 
 const {createWindow} = require('./src/window')
@@ -8,8 +8,27 @@ const lock = app.requestSingleInstanceLock()
 
 let windowSingleton
 
+//console.log(process.versions);
+
+const dnt = "1";
+const secChUa = "Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"";
+const secChUaMobile = "?0";
+const upgradeInsecureRequests = "1";
+
+const overrideHeaders = () => {
+    session.defaultSession.webRequest.onBeforeSendHeaders((details, callback) => {
+        details.requestHeaders['DNT'] = dnt;
+        details.requestHeaders['sec-ch-ua'] = secChUa;
+        details.requestHeaders['sec-ch-ua-mobile'] = secChUaMobile;
+        details.requestHeaders['Upgrade-Insecure-Requests'] = upgradeInsecureRequests;
+    
+        callback({cancel: false, requestHeaders: details.requestHeaders});
+    });
+}
+
 const start = () => {
     createWindow().then((window)=>{
+        overrideHeaders()
         if(!lock){
             showNotification()
         }

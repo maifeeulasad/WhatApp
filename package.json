@@ -13,8 +13,8 @@
     "build": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^13.1.1",
-    "electron-builder": "^22.10.5"
+    "electron": "^13.1.8",
+    "electron-builder": "^22.11.7"
   },
   "build": {
     "appId": "whatapp",
